@@ -9,6 +9,7 @@ import org.apache.catalina.webresources.DirResourceSet;
 import org.apache.catalina.webresources.StandardRoot;
 
 /**
+ * 
  * Launch adapted from Heroku devcenter's example
  * 
  * https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat
@@ -18,8 +19,8 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        // Jos "PORT" löytyy ympäristömuuttujista, käytetään sitä. Muussa tapauksessa
-        // käytetään porttia 8080:
+        // Jos "PORT" löytyy ympäristömuuttujista, käytetään sitä.
+    	// Muussa tapauksessa käytetään porttia 8080:
         int httpPort = Integer.valueOf(System.getenv().getOrDefault("PORT", "8080"));
 
         Tomcat tomcat = createServer(httpPort);
@@ -42,14 +43,10 @@ public class Main {
         // Web-sovelluksen julkisten tiedostojen sijainti:
         String webappDirPath = new File("src/main/webapp/").getAbsolutePath();
 
-        // Lisätään oma sovelluksemme Tomcatiin palvelimen juureen:
+        // Lisätään oma sovellus Tomcatiin palvelimen juureen:
         Context webApp = tomcat.addWebapp("", webappDirPath);
 
-        // HUOM! Jos haluat, että palvelin käynnistää itsensä uudelleen muutettuasi
-        // tiedostoja, poista kommentti seuraavalta riviltä:
-        // webApp.setReloadable(true);
-
-        // Määritellään sovelluksemme resurssien sijainnit:
+        // Määritellään sovelluksen resurssien sijainnit:
         WebResourceRoot resources = new StandardRoot(webApp);
         resources.addPreResources(
                 new DirResourceSet(resources, "/WEB-INF/classes", new File("target/classes").getAbsolutePath(), "/"));
