@@ -1,19 +1,18 @@
-# Harjoitustyö ja Embedded Tomcat -projektipohja 
+# Welcome to my first Java project!
 
-Tämä on Haaga-Helia AMK:n Ohjelmointi 2 -kurssilla tekemäni harjoitustyö.
+This is an assignment I did for a Java Programming course at Haaga-Helia University of Applied Sciences.
 
-Projektin luomisessa on käytetty pohjana Ohjelmointi 2-kurssin Embedded Tomcat -projektipohjaa.
-Projektipohja löytyy osoitteesta https://github.com/ohjelmointi2/embedded-tomcat-template.
+The project is created on the Embedded Tomcat project template from the Haaga-Helia Programming 2 course. The project template can be found at https://github.com/ohjelmointi2/embedded-tomcat-template.
 
-Projektipohjan ja siihen liittyvän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
+The project template and its related learning material were developed by Teemu Havulinna and are licensed under a [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
 
-## Projektin tiedostot
+## Project files
 
-Projekti noudattaa seuraavaa hakemistorakennetta:
+The project has the following directory structure:
 
 ```tree
-embedded-tomcat
+harjoitustyo
 │   pom.xml
 │   README.md
 │
@@ -36,31 +35,31 @@ embedded-tomcat
 
 ```
 
-### Tiedostojen kuvaukset:
+### File descriptions:
 
-[README.md](README.md): Tämä tiedosto
+README.md: Information about this project
 
-[pom.xml](pom.xml): "[Project Object Model"-tiedosto mm. riippuvuuksien määrittelemiseksi
-
-
-[src/main/java](src/main/java): Java-pakettien juurihakemisto
+pom.xml: The Project Object Model file that contains information about project, dependencies and configuration details for Maven
 
 
-[src/main/resources](src/main/resources): Hakemisto esimerkiksi .properties-tiedostoille
+src/main/java: Java-pakettien juurihakemisto
 
 
-[src/main/java/launch/Main.java](src/main/java/launch/Main.java): Luokka Tomcat-palvelimen käynnistämiseksi
+src/main/resources: Hakemisto esimerkiksi .properties-tiedostoille
 
 
-[src/main/java/servlet/IndexServlet.java](src/main/java/servlet/IndexServlet.java): Esimerkki HTTP-liikennettä tukevasta Java-luokasta
+src/main/java/launch/Main.java: The Main class that starts the Tomcat server. This code is from the project template, so it is not written by me.
 
 
-[src/main/webapp](src/main/webapp): Hakemisto staattisille tiedostoille (css, kuvat, JS)
+src/main/java/servlet/IndexServlet.java: Esimerkki HTTP-liikennettä tukevasta Java-luokasta
 
 
-[src/main/webapp/WEB-INF](src/main/webapp/WEB-INF): Erityinen hakemisto, jonne on estetty suora pääsy selaimilta
+src/main/webapp: Directory for static files (CSS, pictures, JS)
 
 
-[src/main/webapp/WEB-INF/index.jsp](src/main/webapp/WEB-INF/index.jsp): IndexServlet-luokan käyttämä sivupohja
+src/main/webapp/WEB-INF: Erityinen hakemisto, jonne on estetty suora pääsy selaimilta
+
+
+src/main/webapp/WEB-INF/index.jsp: IndexServlet-luokan käyttämä sivupohja
 
 
