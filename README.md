@@ -37,29 +37,30 @@ harjoitustyo
 
 ### File descriptions:
 
-README.md: Information about this project
+**README.md:** Information about this project.
 
-pom.xml: The Project Object Model file that contains information about project, dependencies and configuration details for Maven
+**pom.xml:** The Project Object Model file that contains information about project, dependencies and configuration details for Maven.
 
+**.settings:** a settings directory for Eclipse IDE containing settings for various project-level configurations. This is from the project template, so it is not written by me.
 
-src/main/java: Java-pakettien juurihakemisto
+**.classpath:** a configuration file for Eclipse IDE  that defines classpath entries, including source directory, libraries, and output folder. This is from the project template, so it is not written by me.
 
+**.gitignore:** specifies files that Git should ignore, which are usually files not needed to be tracked by version control like build outputs, log files, or temporary files. This is from the project template, so it is not written by me.
 
-src/main/resources: Hakemisto esimerkiksi .properties-tiedostoille
+**.project:** an Eclipse-specific configuration file that specifies the nature of the project and the build commands to be used within the Eclipse IDE. This is from the project template, so it is not written by me.
 
+**src/main/java:** This directory contains the Java source files for the main application code.
 
-src/main/java/launch/Main.java: The Main class that starts the Tomcat server. This code is from the project template, so it is not written by me.
+**src/main/java/launch/Main.java:** The Main class that starts the Tomcat server. This is from the project template, so it is not written by me.
 
+**src/main/resources:** a directory for project resource files.
 
-src/main/java/servlet/IndexServlet.java: Esimerkki HTTP-liikennettä tukevasta Java-luokasta
+**src/main/java/servlet/IndexServlet.java:** Esimerkki HTTP-liikennettä tukevasta Java-luokasta
 
+**src/main/webapp:** Directory for static files (CSS, pictures, JS)
 
-src/main/webapp: Directory for static files (CSS, pictures, JS)
+**src/main/webapp/WEB-INF:** This directory is a secure location for resources related to the application such as libraries and server-side scripts like JSP files, which are not directly accessible by the browser but can be forwarded to by server-side processes like servlets.
 
-
-src/main/webapp/WEB-INF: Erityinen hakemisto, jonne on estetty suora pääsy selaimilta
-
-
-src/main/webapp/WEB-INF/index.jsp: IndexServlet-luokan käyttämä sivupohja
+**src/main/webapp/WEB-INF/index.jsp:** IndexServlet-luokan käyttämä sivupohja
 
 
