@@ -14,15 +14,15 @@ import model.Artist;
 
 @WebServlet("/")
 public class ArtistListServlet extends HttpServlet {
-	
+
 	private ArtistDao dao = new ArtistDao();
-	
+
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Artist> artists = this.dao.getAllArtists();
-		
-		// Haetaan kaikki artistit, välitetään artistit JSP-sivulle
-		resp.getWriter().println(artists);
+
+		req.setAttribute("artists", artists);
+		req.getRequestDispatcher("/WEB-INF/artistList.jsp").forward(req, resp);
 
 	}
 
