@@ -1,10 +1,23 @@
 # Welcome to my first Java project!
 
-This is an assignment I did for a Java Programming course at Haaga-Helia University of Applied Sciences.
+## Description
+
+This is an assignment I did for a Java Programming course at Haaga-Helia University of Applied Sciences. The main objective of the assignment was to enhance my skills in Java programming, specifically in handling HTTP requests, manipulating user-input data, using Java Database Connectivity (JDBC), and generating dynamic HTML pages using JavaServer Pages (JSP).
+
+The project I developed is a web-based app with a database for browsing and managing artists and albums. It The data operations are handled in Java using JDBC. HTTP request processing is managed by servlets, and the user interface is built using JSP with the help of the JavaServer Pages Standard Tag Library (JSTL).
+
+The design of the application is kept simple, focusing on function over form, with minimal CSS and straightforward HTML structures.
+
+
+## Credits
 
 The project is created on the Embedded Tomcat project template from the Haaga-Helia Programming 2 course. The project template can be found at https://github.com/ohjelmointi2/embedded-tomcat-template.
 
 The project template and its related learning material were developed by Teemu Havulinna and are licensed under a [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+
+The project uses the Chinook sample database created by [Luis Rocha](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md) and is licensed as open source under the MIT license. The database can be found at: https://github.com/lerocha/chinook-database
+
+For the CSS style, the project uses the Holiday classless CSS theme, created by [Evgeny Orekhov](https://github.com/EvgenyOrekhov/holiday.css/blob/master/LICENSE) and is licensed as open source under the MIT license. They Holiday CSS theme can be found at: https://github.com/EvgenyOrekhov/holiday.css
 
 
 ## Project files
@@ -15,52 +28,63 @@ The project has the following directory structure:
 harjoitustyo
 │   pom.xml
 │   README.md
+│   screenshot.png
 │
 └───src
     └───main
         ├───java
+        │   ├───database
+        │   │   │   AlbumDao.java
+        │   │   │   ArtistDao.java
+        │   │   │   Database.java
+        │   │
         │   ├───launch
-        │   │       Main.java
+        │   │   │   Main.java
+        │   │
+        │   ├───model
+        │   │   │   Album.java
+        │   │   │   Artist.java
         │   │
         │   └───servlet
-        │           IndexServlet.java
+        │       │   AlbumListServlet.java
+        │       │   ArtistListServlet.java
+        │       │   SearchServlet.java
         │
         ├───resources
+        │   │   .gitignore
+        │
         └───webapp
-            ├───styles
-            │       demo.css
-            │
             └───WEB-INF
-                    index.jsp
+                │   albumList.jsp
+                │   artistList.jsp
+                │   searchResults.jsp
 
 ```
 
 ### File descriptions:
 
-**README.md:** Information about this project.
+**pom.xml:** The Project Object Model file that contains information about project, dependencies and configuration details used by Maven to build the project. It also includes dependencies required for the project. This is from the project template, and only modified by me.
 
-**pom.xml:** The Project Object Model file that contains information about project, dependencies and configuration details for Maven.
+**README.md:** Information about this project, including a summary of the project and descriptions of key files.
 
-**.settings:** a settings directory for Eclipse IDE containing settings for various project-level configurations. This is from the project template, so it is not written by me.
+**screenshot.png:** A screenshot of the project's front page, to give an idea of what the app is like.
 
-**.classpath:** a configuration file for Eclipse IDE  that defines classpath entries, including source directory, libraries, and output folder. This is from the project template, so it is not written by me.
+**AlbumDao.java:** A Data Access Object (DAO) class. It interacts with the database and handles the data operations for albums.
 
-**.gitignore:** specifies files that Git should ignore, which are usually files not needed to be tracked by version control like build outputs, log files, or temporary files. This is from the project template, so it is not written by me.
+**ArtistDao.java:** A Data Access Object (DAO) class. It interacts with the database and handles the data operations for artists.
 
-**.project:** an Eclipse-specific configuration file that specifies the nature of the project and the build commands to be used within the Eclipse IDE. This is from the project template, so it is not written by me.
+**Database.java:** This class is responsible for establishing and closing connections with the database.
 
-**src/main/java:** This directory contains the Java source files for the main application code.
+**Main.java:** The Main class that starts the Tomcat server. This is from the project template, so it is not written by me.
 
-**src/main/java/launch/Main.java:** The Main class that starts the Tomcat server. This is from the project template, so it is not written by me.
+**Album.java:** A Java model class that represents an album in the app.
 
-**src/main/resources:** a directory for project resource files.
+**Artist.java:** A Java model class that represents an artist in the app.
 
-**src/main/java/servlet/IndexServlet.java:** Esimerkki HTTP-liikennettä tukevasta Java-luokasta
+**albumList.jsp:** A JavaServer (JSP) page that generates the HTML content to display the list of albums fetched from the database.
 
-**src/main/webapp:** Directory for static files (CSS, pictures, JS)
+**artistList.jsp:** A JavaServer (JSP) page that generates the HTML content to to display the list of artists fetched from the database.
 
-**src/main/webapp/WEB-INF:** This directory is a secure location for resources related to the application such as libraries and server-side scripts like JSP files, which are not directly accessible by the browser but can be forwarded to by server-side processes like servlets.
-
-**src/main/webapp/WEB-INF/index.jsp:** IndexServlet-luokan käyttämä sivupohja
+**searchResults.jsp:** A JavaServer (JSP) page that generates the HTML content to display the search results for artists.
 
 
