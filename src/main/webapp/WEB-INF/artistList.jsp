@@ -2,16 +2,27 @@
 <html>
 <head>
 <title>Artist List</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.0" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.0" />
 </head>
 <body>
-	<h1>All artists</h1>
+	<h1>Java app assignment by Lotta</h1>
 
+	<h3>Add an artist</h3>
 	<form method="post">
 		<input name="name" type="text" required
-			placeholder="type artist name..." autofocus /> <input type="submit"
-			value="Add artist to list" />
+			placeholder="type artist name to add an artist..." autofocus /> <input
+			type="submit" value="Add artist" />
 	</form>
+
+	<h3>Search for an artist</h3>
+	<form action="search" method="get">
+		<input name="name" type="text" required
+			placeholder="type artist name to search..." autofocus /> <input
+			type="submit" value="Search" />
+	</form>
+
+	<h3>All artists</h3>
 
 	<table>
 		<tr>
@@ -25,15 +36,6 @@
 		</c:forEach>
 	</table>
 
-	<!-- 
-	<ol>
-		<c:forEach items="${ artists }" var="artist">
-			<li>
-			<a href="/albums?ArtistId=${ artist.getId() }"><c:out value="${ artist.getName() }" /></a>
-			</li>
-		</c:forEach>
-	</ol>
-	  -->
 
 </body>
 </html>

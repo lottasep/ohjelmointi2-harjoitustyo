@@ -18,15 +18,9 @@
 		</c:forEach>
 	</table>
 
-	<!--  
-	<ol>
-		<c:forEach items="${ albums }" var="album">
-			<li>
-			<c:out value="${ album.getName() }" />
-			</li>
-		</c:forEach>
-	</ol>
-	-->
+	<p>
+		<a href="/">Back to start</a>
+	</p>
 
 </body>
 </html>
