@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Database {
-	// "jdbc:sqlite:C:\\Users\\seppa\\SQLite\\Chinook_Sqlite.sqlite";
 	private static final String JDBC_URL = System.getenv("JDBC_DATABASE_URL");
 
     public Connection getConnection() throws SQLException {
