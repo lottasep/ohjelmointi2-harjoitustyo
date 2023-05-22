@@ -18,4 +18,8 @@ public class Artist {
 		return this.name;
 	}
 
+	public long getId() {
+		return id;
+	}
+
 }
