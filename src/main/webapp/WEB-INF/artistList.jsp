@@ -6,7 +6,7 @@
 	href="https://cdn.jsdelivr.net/npm/holiday.css@0.11.0" />
 </head>
 <body>
-	<h1>Java app assignment by Lotta</h1>
+	<h1>Java Music Database App</h1>
 
 	<h3>Add an artist</h3>
 	<form method="post">

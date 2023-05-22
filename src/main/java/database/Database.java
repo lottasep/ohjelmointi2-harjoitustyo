@@ -7,8 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Database {
-	// System.getenv("JDBC_DATABASE_URL");
-	private static final String JDBC_URL = "jdbc:sqlite:C:\\Users\\seppa\\SQLite\\Chinook_Sqlite.sqlite";
+	// "jdbc:sqlite:C:\\Users\\seppa\\SQLite\\Chinook_Sqlite.sqlite";
+	private static final String JDBC_URL = System.getenv("JDBC_DATABASE_URL");
 
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(JDBC_URL);
